@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cloud Service Models Visualizer: IaaS vs PaaS vs SaaS</title>
+<meta name="description" content="Animated, interactive guide to IaaS, PaaS and SaaS for beginners.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-mode="beginner">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div><h1>Cloud Service Models Visualizer</h1><p>Ravi wants to start an online business. Which cloud model should he choose?</p></div>
+<div><button id="modeBtn" aria-pressed="false">Mode: Beginner</button> <button id="themeBtn">Switch theme</button></div></header>
+<div class="app">
+<aside class="side"><nav id="nav" aria-label="Learning steps"></nav>
+<div class="ctl"><button id="play" aria-pressed="false">Auto-play</button><button id="pause">Pause</button><button id="reset">Reset</button></div>
+<div class="prog" id="prog" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="9" aria-valuenow="1"><i></i></div><small id="progTxt"></small></aside>
+<main id="main">
+<div class="vizwrap" id="vizwrap"></div>
+<div class="cards" aria-live="polite">
+<article class="card"><h3>Step Title</h3><p id="cT"></p></article>
+<article class="card plain"><h3>In Plain Words</h3><p id="cP"></p></article>
+<article class="card tech"><h3>Technical Explanation</h3><p id="cX"></p></article>
+<article class="card"><h3>Watch the Animation</h3><p id="cW"></p></article>
+</div>
+<section class="card" id="layerInfo"></section>
+<section class="card rv" data-s="2" id="models"></section>
+<section class="card rv" data-s="5" id="matrix"></section>
+<section class="card rv" data-s="6" id="examples"></section>
+<section class="card rv" data-s="7" id="compare"></section>
+<section class="card rv" data-s="8" id="quizBox"></section>
+<section class="card" id="tools"></section>
+</main></div>
+<script src="js/steps.js"></script><script src="js/architecture.js"></script><script src="js/animations.js"></script><script src="js/quiz.js"></script><script src="js/app.js"></script>
+</body></html>

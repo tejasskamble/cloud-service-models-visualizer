@@ -1,0 +1,38 @@
+:root{--bg:#f3f6fc;--fg:#0e1a33;--card:#fff;--mut:#516080;--bd:#d8e0ee;--acc:#2563eb;--on:#fff}
+[data-theme=dark]{--bg:#081022;--fg:#e8eefb;--card:#101b36;--mut:#a3b3d3;--bd:#22325a;--acc:#7aa7ff;--on:#06122b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 'Bricolage Grotesque',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;z-index:9;background:var(--card);padding:8px}
+.top{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;padding:20px 28px;background:linear-gradient(120deg,#0b1b3a,#1d3f8f);color:#fff}
+.top h1{margin:0;font-size:clamp(1.4rem,3vw,2.1rem);font-weight:800}.top p{margin:4px 0 0;opacity:.85}
+button{font:inherit;cursor:pointer;border:1px solid var(--bd);background:var(--card);color:var(--fg);border-radius:10px;padding:8px 14px}
+button:hover{border-color:var(--acc)}:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.top button{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.4)}
+[aria-pressed=true],[aria-selected=true]{border-color:var(--acc)!important;background:var(--acc)!important;color:var(--on)!important}
+.app{display:grid;grid-template-columns:300px minmax(0,1fr);gap:24px;padding:24px 28px;max-width:1700px;margin:auto}
+.side{position:sticky;top:12px;align-self:start}
+#nav{display:grid;gap:8px}#nav button{display:flex;gap:12px;align-items:center;text-align:left;width:100%;padding:10px 12px}
+#nav b{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:50%;background:var(--bd)}
+#nav small{display:block;color:var(--mut)}#nav .done b{background:#22c55e;color:#06122b}
+#nav .cur{border-color:var(--acc);box-shadow:0 0 0 2px var(--acc)}#nav .cur b{background:var(--acc);color:var(--on)}
+.ctl{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.prog{height:8px;border-radius:8px;background:var(--bd);overflow:hidden}.prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,#3b82f6,#14b8a6);transition:width .4s}
+.vizwrap{overflow-x:auto;border-radius:18px}#viz{display:block;width:100%;min-width:820px;height:auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:16px 18px;margin-bottom:14px}.cards .card{margin:0}
+.card h3{margin:0 0 6px;font-size:1.05rem;color:var(--acc)}.card h4{margin:8px 0 4px;font-size:1.15rem}.card p{margin:.3em 0}
+.card.rv{display:none}.card.rv.on{display:block}
+[data-mode=beginner] .tech,[data-mode=technical] .plain{display:none}
+svg .rv{opacity:0;visibility:hidden;transition:opacity .6s,visibility .6s}svg .rv.on{opacity:1;visibility:visible}
+svg text{font-family:inherit}.cap{fill:#fff;font-size:21px;font-weight:600}.lb{fill:#cfe0ff;font-size:15px}.st{fill:#fff;font-size:28px;font-weight:800}.mf{fill:#fff;font-size:20px;font-weight:600}
+.ly{cursor:pointer}.ly text{fill:#fff;pointer-events:none}.ly.dk text{fill:#06122b}.ln{font-size:19px;font-weight:600}.lo{font-size:14px}
+.lr{transition:fill .5s;stroke:transparent;stroke-width:4}.ly.sel .lr,.ly:focus-visible .lr{stroke:#fff}.ly:focus{outline:none}
+.dots{display:none}.dots.on{display:inline}.rm .dots{display:none!important}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%}th,td{border-bottom:1px solid var(--bd);padding:8px 10px;text-align:left}.dim{opacity:.3}
+.chip{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:8px}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 10px}
+dt{font-weight:600;margin-top:8px}dd{margin:0;color:var(--mut)}.own{list-style:none;padding:0}
+.opts{display:grid;gap:8px}.opts button{text-align:left}.ok{background:#16a34a!important;color:#fff!important}.bad{background:#dc2626!important;color:#fff!important}
+.btn{margin-left:8px}.big{font-size:2.6rem;font-weight:800;margin:0}
+input,select{font:inherit;padding:8px;border-radius:8px;border:1px solid var(--bd);background:var(--card);color:var(--fg);max-width:100%}
+@media(max-width:900px){.app{grid-template-columns:1fr;padding:16px}.side{position:static}#nav{display:flex;overflow-x:auto;padding-bottom:6px}#nav button{min-width:180px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}

@@ -1,0 +1,42 @@
+/* Learning content: edit text here. */
+const STEPS=[
+{t:'Cloud Computing',sub:'IT rented over the internet',cap:'Cloud = IT resources rented over the internet',
+plain:'Ravi wants an online shop but cannot afford computers. He rents them over the internet and pays only for what he uses, like electricity.',
+tech:'Cloud computing delivers on-demand compute, storage and networking over the internet with elastic scaling and pay-as-you-go billing.',
+watch:'The cloud floats above everything: shared resources living on the internet.'},
+{t:'Traditional Computing',sub:'You own everything',cap:'On-premises: you own and run all 9 layers',
+plain:'Before the cloud, Ravi would buy servers, storage and cables, keep them in a room and fix them himself. Slow and costly.',
+tech:'On-premises IT means upfront hardware cost plus power, cooling, networking, patching and staff. You own every layer.',
+watch:'Every layer turns gold: you own and maintain all nine.'},
+{t:'IaaS',sub:'Rent the infrastructure',cap:'IaaS: provider gives hardware, you do the rest',
+plain:'Like renting an empty apartment. The building (computers, warehouse, roads) is provided; Ravi brings the furniture: OS, software and data.',
+tech:'IaaS offers virtual machines, block storage and virtual networks. You install and patch the OS, middleware, runtime and apps.',
+watch:'Blue dots: the provider supplies infrastructure. Gold and teal dots: you configure the OS and applications.'},
+{t:'PaaS',sub:'Bring only your code',cap:'PaaS: you upload code, the platform runs it',
+plain:'Like a fully equipped kitchen. Stove, tools and cleaning are covered; Ravi only brings the recipe: his code and data.',
+tech:'PaaS manages the OS, middleware and runtime, and adds deployment, autoscaling and monitoring. Developers push code.',
+watch:'Teal dots: the developer deploys code to the managed platform.'},
+{t:'SaaS',sub:'Use a finished app',cap:'SaaS: a ready-made app delivered to users',
+plain:'Like eating at a restaurant. Everything is cooked and served; Ravi just opens Gmail or Salesforce in a browser.',
+tech:'SaaS vendors run the full stack and ship updates centrally. Customers manage data, accounts, permissions and app settings.',
+watch:'Green dots: a complete application reaches the user, who just opens it.'},
+{t:'Shared Responsibility',sub:'Who manages what',cap:'Provider vs customer across all 9 layers',
+plain:'From IaaS to SaaS the provider does more and Ravi does less. His data always stays his responsibility.',
+tech:'The shared responsibility model splits operations and security by layer. The customer always owns data and access; the provider owns the physical layers.',
+watch:'Click any layer to see who manages it. The table lists all nine layers for all three models.'},
+{t:'Real-World Examples',sub:'AWS, Azure, Google Cloud',cap:'All three big clouds sell all three models',
+plain:'Ravi can rent a server, deploy a web app or sign up for office tools from the same company.',
+tech:'AWS, Azure and Google Cloud expose IaaS (VMs), PaaS (app platforms) and SaaS (business and productivity apps).',
+watch:'Product names appear under each stack. See the table for all three clouds.'},
+{t:'Comparison',sub:'Cost, control, scale',cap:'More control = more work. Less = less work',
+plain:'IaaS gives the most control and the most work; SaaS the least of both; PaaS sits in the middle.',
+tech:'Compare cost model, control, flexibility, scalability, maintenance and use cases. Choose by team skills and how custom the workload is.',
+watch:'Use the switcher to highlight one model, or try the scenario simulator at the bottom.'},
+{t:'Knowledge Quiz',sub:'Test yourself',cap:'Quiz time: five questions',
+plain:'Ravi has learned a lot. Answer five questions to see how much stuck.',
+tech:'Five multiple-choice questions on control, responsibility and examples.',
+watch:'The three stacks keep running while you answer.'}];
+const CLOUDS=[['AWS','Amazon EC2','Elastic Beanstalk','Amazon Connect'],['Azure','Virtual Machines','App Service','Microsoft 365, Dynamics 365'],['Google Cloud','Compute Engine','App Engine','Google Workspace']];
+const CMP=[['Cost model','Pay per resource used','Pay per app and usage','Per-user subscription'],['Control','High','Medium','Low'],['Flexibility','Highest','Medium','Lowest'],['Scalability','You design it','Built into the platform','Vendor handles it'],['Maintenance','You patch OS and runtime','You maintain only your code','Vendor maintains all'],['Best for','Migrations, custom stacks','Web apps and APIs','Email, CRM, teamwork']];
+const SCEN=[['Ravi needs a custom server with special software installed','IaaS','Only IaaS gives control of the operating system.'],['Ravi\'s developers want to ship a web shop without touching servers','PaaS','PaaS runs the OS and runtime; you only deploy code.'],['Ravi needs email and documents for his team by tomorrow','SaaS','A ready-made app needs no setup beyond accounts.']];
+const GLOSS=[['Cloud provider','Company that owns data centres and rents resources (AWS, Azure, Google Cloud).'],['Virtual machine','A software-made computer running on shared hardware.'],['Hypervisor','Software that splits one server into many virtual machines.'],['Operating system','Foundation software such as Linux or Windows.'],['Middleware','Software between the OS and your app: web servers, queues, caches.'],['Runtime','Environment that executes code, e.g. Node.js or the JVM.'],['Scalability','Ability to handle more or less load.'],['Shared responsibility','Provider and customer each secure their own layers.']];
